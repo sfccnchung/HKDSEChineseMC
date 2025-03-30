@@ -2,7 +2,6 @@ let currentQuestion = 0;
 let questions = [];
 
 async function loadQuestions() {
-  const baseUrl = window.location.pathname.split("/")[1];
   const res = await fetch(`/${baseUrl}/data/${topicId}.json`);
   questions = await res.json();
   loadQuestion();
